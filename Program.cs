@@ -30,13 +30,13 @@ namespace Lab_Day3
                     isNum = double.TryParse(s, out tempnum);
                     if (isNum)
                     {
-                        //if argument is a number, we assign an income, and calculate taxes
+                        //if argument is a number, we assign an income, and calculate taxes. The 
                         income = tempnum;
 
 
-                        if ( income > 0)
+                        if (income > 0)
                         {
-
+                            
                             taxPercent = 5;
                             if (income <= 20000)
                             {
@@ -50,6 +50,7 @@ namespace Lab_Day3
                         }
                         if (income > 20000)
                         {
+                            
                             taxPercent = 10;
                             if (income <= 50000)
                             {
@@ -80,9 +81,9 @@ namespace Lab_Day3
                         Console.WriteLine("The income taxes of a person with an income of " + income.ToString("c2") + " come to " + totaltaxes.ToString("c2"));
                     }
                     else
-                        Console.WriteLine( s +  " is not a valid income");
-                        
-                    
+                        Console.WriteLine(s + " is not a valid income");
+
+
                     Console.ReadLine();
                 }
             }
@@ -90,44 +91,55 @@ namespace Lab_Day3
                 Console.WriteLine("There are no arguments on the command line");
             Console.Read();
             Console.Clear();
+
+            
+
+
+
+
+
+
             //Time and Classifications
 
+            //Create DateTime object, and initialize to current time at run
             DateTime seconds = DateTime.Now;
             int currentSeconds = seconds.Second;
-            
+          
             //test quarter 1
-            //int testQ1 = 2;
+            //int testQ1 = 0;
             //currentSeconds = testQ1;
 
             //test quarter 2
-            //int testQ2 = 16;
+            //int testQ2 = 15;
             //currentSeconds = testQ2;
 
             //test quarter 3
-            //int testQ3 = 35;
+            //int testQ3 = 30;
             //currentSeconds = testQ3;
 
             //test quarter 4
-            //int testQ4 = 50;
+            //int testQ4 = 45;
             //currentSeconds = testQ4;
 
             //test out of time range
-            //int testNonQ = 90
+            //int testNonQ = 22;
             //currentSeconds = testNonQ;
-
-            if (currentSeconds < 15)
+            
+           
+            //Displays a message based on the current time at runtime
+            if (currentSeconds == 0)
             {
                 Console.WriteLine("This new minute is just beginning");
             }
-            else if (currentSeconds < 30)
+            else if (currentSeconds == 15)
             {
                 Console.WriteLine("We're one quarter done");
             }
-            else if (currentSeconds < 45)
+            else if (currentSeconds == 30)
             {
                 Console.WriteLine("Half way There");
             }
-            else if (currentSeconds < 60)
+            else if (currentSeconds == 45)
             {
                 Console.WriteLine("Getting close to done");
             }
